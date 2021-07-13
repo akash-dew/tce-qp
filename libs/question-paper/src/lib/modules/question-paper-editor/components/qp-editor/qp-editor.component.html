@@ -1,0 +1,30 @@
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">    Select your qp template
+    </h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <select #re>
+            <option>Select Your template</option>
+
+            <option>Templat1 1</option>
+            <option>Templat1 10</option>
+
+            <option>Templat1 100</option>
+            <option>Templat1 1000</option>
+            <option>Templat1 10000</option>
+
+        </select>
+        <div>Preview</div>
+        <div>{{re.value}}
+
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>

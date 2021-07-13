@@ -1,0 +1,73 @@
+
+  <!-- <ng-template #content let-c="close" let-d="dismiss"> -->
+    <div>
+
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">            Setup your Question Paper 
+    </h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="new-question">
+            <div class="row">
+            </div>
+            <div class="     -drop">
+                <select>
+                    <option>Maths</option>
+                    <option>Science</option>
+        
+                </select>
+            </div>
+        
+            <br />
+            <label>Question Paper Title
+            </label>
+            <br />
+            <input class="input-el" type="text" />
+            <br />
+            Question Paper Format
+            <br />
+        
+            <select class="input-el">Select Your Question
+                <option>Maths</option>
+                <option>Science</option>
+            </select>
+            <br />
+            <div class="row">
+                <div class="col">
+                    <p>Time</p>
+                    <select>
+                        <option>Please Select</option>
+                        <option>30 Min</option>
+                        <option>60 Min</option>
+                    </select>
+        
+                </div>
+                <div class="col">
+                    <p>Marks</p>
+                    <select>
+                        <option>Please Select</option>
+                        <option>Each question 10 marks</option>
+                        <option>Each question 5 marks</option>
+                    </select>
+        
+                </div>
+            </div>
+        
+            <div class="row">
+                <p>OR CONTINUE WITHOUT TEMPLATE</p>
+                &nbsp; &nbsp; <button style='text-transform: uppercase;' (click)="defineTemplate(contentqpeditor);c('Save click')">define template</button>
+            </div>
+        
+        </div> 
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </div>
+
+  <!-- </ng-template> -->
+  
+  <tce-qp-qp-editor #contentqpeditor></tce-qp-qp-editor>
