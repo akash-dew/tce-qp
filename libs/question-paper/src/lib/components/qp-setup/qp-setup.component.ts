@@ -24,10 +24,10 @@ export class QpSetupComponent {
   }
 
   open(content:any) {
-    this.modalService.open(content.content);
+    this.modalService.open(content.content, { windowClass: 'dark-theme-modal',size: 'lg', centered: true});
   }
   defineTemplate(content:any){
-    this.modalService.open(content.content);
+    this.modalService.open(content.content, { windowClass: 'dark-theme-modal',size: 'lg', centered: true });
   }
    c(el:any){
       this.modalService.dismissAll();
